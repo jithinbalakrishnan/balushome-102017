@@ -1,0 +1,25 @@
+{
+  "name": "balushome",
+  "version": "1.0.0",
+  "description": "Updating Balu'sHome.com",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/jithinbalakrishnan/balushome-102017.git"
+  },
+  "author": "jithin balakrishnan",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/jithinbalakrishnan/balushome-102017/issues"
+  },
+  "homepage": "https://github.com/jithinbalakrishnan/balushome-102017#readme",
+  "dependencies": {
+    "angular": "^1.6.6",
+    "angular-route": "^1.6.6",
+    "bootstrap": "^3.3.7",
+    "font-awesome": "^4.7.0"
+  }
+}
