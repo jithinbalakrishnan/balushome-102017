@@ -10,6 +10,11 @@ route.config(function ($routeProvider) {
         })
         .when("/contact", {
             templateUrl: "templates/contact.html"
+        }).when("/blogs", {
+            templateUrl: "templates/blogs.html"
+        })
+        .when("/services-upholstery", {
+            templateUrl: "templates/services-upholstery.html"
         })
         .otherwise({redirectTo :'/'});
 
