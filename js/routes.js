@@ -6,4 +6,6 @@ route.config(function ($routeProvider) {
             templateUrl: "templates/home.html"
         })
         .otherwise({redirectTo :'/'});
+    $locationProvider.html5Mode(true);
+    $locationProvider.hashPrefix('!');
 });
