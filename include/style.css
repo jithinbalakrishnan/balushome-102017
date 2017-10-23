@@ -47,6 +47,10 @@ hr {
     font-weight: 400;
     letter-spacing: 3px;
 }
+.nav-active{
+    background-color: #e7e7e7!important;
+    color: black!important;
+}
 
 .img-full {
     min-width: 100%;

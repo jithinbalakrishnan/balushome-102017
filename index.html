@@ -36,11 +36,53 @@
     <meta name="keywords" content="online furniture, online furniture shopping, furniture stores, online furniture store, furniture online shopping, sofa recovering, furniture repair, online stores in Bahrain, home shopping" />
 
 </head>
-<body>
+<body ng-controller="mainCtrl">
 <!-- Google Tag Manager (noscript) -->
 <noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-W47RS2Q"
                   height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
 <!-- End Google Tag Manager (noscript) -->
+<!-- Brand Heading -->
+<div>
+    <div class="brand">BALU'S HOME</div>
+    <div class="address-bar"><strong>Quality meet Demands </strong> </div>
+</div>
+<!-- End Brand heading -->
+<!-- Navigation -->
+<nav class="navbar navbar-default" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+            <a class="navbar-brand" href="index.html">Balu's Home</a>
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="#" id="home_nav" class="" target="_self" ng-class="{'nav-active' : active == 0}" ng-click="active = 0">Home</a>
+                </li>
+                <li>
+                    <a href="#" id="about_nav" class="" target="_self" ng-class="{'nav-active' : active == 1}" ng-click="active = 1">About</a>
+                </li>
+                <li>
+                    <a href="#" id="contact_nav" class="" ng-class="{'nav-active' : active == 2}" ng-click="active = 2">Contact</a>
+                </li>
+                <li>
+                    <a href="#" id="blogs_nav" class="" target="_self" ng-class="{'nav-active' : active == 3}" ng-click="active=3">Blogs</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
 <ng-view></ng-view>
 </body>
 </html>
