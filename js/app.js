@@ -1,5 +1,5 @@
 angular.module('balushome', ['route'])
-    .controller('mainCtrl', function ($scope){
+    .controller('mainCtrl', function ($scope, $location){
         $scope.active = 0;
         $scope.furniture = [ {
             type:"sofa",
@@ -403,4 +403,9 @@ angular.module('balushome', ['route'])
 
 
         ];
+
+
+        $scope.routeTo = function(route) {
+            $location.path(route);
+        }
     });
