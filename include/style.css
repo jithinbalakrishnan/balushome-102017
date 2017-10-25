@@ -83,8 +83,11 @@ hr {
 .box {
     margin-bottom: 20px;
     padding: 30px 15px;
-    background: #fff;
-    background: rgba(255,255,255,0.9);
+    background: rgba(255,255,255,0.9)!important;
+}
+.btn{
+    max-width: 275px;
+    border-radius: 16px!important;
 }
 
 .intro-text {
@@ -114,6 +117,16 @@ footer p {
     margin: 0;
     padding: 50px 0;
 }
+.image-wrapper {
+    min-height: 250px;
+    padding-top: 25px;
+    width: 100%;
+    border-radius: 30px 5px 30px 5px;
+    position: relative;
+    max-width: 333px;
+    margin: 0 auto;
+}
+
 
 @media screen and (min-width:768px) {
     .brand {
@@ -132,12 +145,6 @@ footer p {
     .top-divider {
         margin-top: 0;
     }
-
-    .img-left {
-        float: left;
-        margin-right: 25px;
-    }
-
     .address-bar {
         display: inherit;
         margin: 0;
@@ -192,6 +199,8 @@ footer p {
         background-color:white;
         color:crimson;
     }
+
+
 
 }
 

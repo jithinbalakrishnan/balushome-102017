@@ -1,7 +1,11 @@
 angular.module('balushome', ['route'])
+    .controller('serviceCtrl',function(){
+        window.scrollTo(0,0);
+    })
     .controller('mainCtrl', function ($scope, $location){
+        window.scrollTo(0,0);
         $scope.active = 0;
-        $scope.furniture = [ {
+        $scope.furnitures = [ {
             type:"sofa",
             category:"Home Sofa",
             sofaImage:"images/sofa/home-sofa-interior.jpg",
@@ -293,7 +297,7 @@ angular.module('balushome', ['route'])
             {
                 type:"Sofa",
                 category:"Sofa",
-                sofaImage:"images/sofa/sofa-cushions.jpg",
+                sofaImage:"images/sofa/sofa-cushion.jpg",
                 seater:"Not Mentioned",
                 size:"Not mentioned",
                 color:"Beige",
@@ -333,7 +337,7 @@ angular.module('balushome', ['route'])
             {
                 type:"Sofa",
                 category:"Corner Sofa",
-                sofaImage:"images/sofa/sofa-upholster.jpg",
+                sofaImage:"images/sofa/sofa-upholstery.jpg",
                 seater:"7/8 Seater",
                 size:"5 Meter",
                 color:"Pink + White",
@@ -383,7 +387,7 @@ angular.module('balushome', ['route'])
             {
                 type:"Sofa",
                 category:"Sectional Sofa",
-                sofaImage:"images/sofa/sofa-white.jpg",
+                sofaImage:"images/sofa/white-sofa.jpg",
                 seater:"Not Mentioned",
                 size:"Not Mentioned",
                 color:"Silver",
@@ -408,4 +412,8 @@ angular.module('balushome', ['route'])
         $scope.routeTo = function(route) {
             $location.path(route);
         }
+        $scope.slide = function (dir) {
+            $('#carouselId').carousel(dir);
+        };
+
     });

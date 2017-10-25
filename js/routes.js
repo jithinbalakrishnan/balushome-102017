@@ -16,6 +16,10 @@ route.config(function ($routeProvider) {
         .when("/services-upholstery", {
             templateUrl: "templates/services-upholstery.html"
         })
+        .when("/services-reupholstery", {
+            templateUrl: "templates/services-reupholstery.html"
+        })
         .otherwise({redirectTo :'/'});
+
 
 });
