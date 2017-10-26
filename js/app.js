@@ -412,8 +412,6 @@ angular.module('balushome', ['route'])
         $scope.routeTo = function(route) {
             $location.path(route);
         }
-        $scope.slide = function (dir) {
-            $('#carouselId').carousel(dir);
-        };
+
 
     });

@@ -191,17 +191,13 @@ footer p {
         table-layout: fixed;
         font-size: 1.25em;
     }
-    #home_nav,#about_nav,#shopping_nav,#contact_nav,#blogs_nav {
+    #home_nav, #about_nav, #contact_nav, #blogs_nav, #gallery_nav {
         color:black;
     }
-
-    #home_nav:hover ,#about_nav:hover, #shopping_nav:hover ,#contact_nav:hover, #blogs_nav:hover{
+    #home_nav:hover ,#about_nav:hover, #gallery_nav:hover ,#contact_nav:hover, #blogs_nav:hover{
         background-color:white;
         color:crimson;
     }
-
-
-
 }
 
 @media screen and (min-width:1200px) {

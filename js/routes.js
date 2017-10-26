@@ -22,4 +22,5 @@ route.config(function ($routeProvider) {
         .otherwise({redirectTo :'/'});
 
 
+
 });
