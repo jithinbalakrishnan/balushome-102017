@@ -159,7 +159,7 @@ angular.module('balushome', ['route'])
                 category:"Home Sofa Set",
                 sofaImage:"images/sofa/home-sofa-set-2+1+1.jpg",
                 seater:"4+3+1+1 Seater",
-                size:"Na",
+                size:"NA",
                 color:"Bisque",
                 material:"Fabric",
                 manufactureredBy:"Al Shumoe Upholstery"
@@ -208,8 +208,8 @@ angular.module('balushome', ['route'])
                 type:"sofa",
                 category:"Office Sofa",
                 sofaImage:"images/sofa/office-sofa.jpg",
-                seater:"NA",
-                size:"5 Meter",
+                seater:"9-10 Seater",
+                size:"6 Meter",
                 color:"White",
                 material:"Leather",
                 manufactureredBy:"Al Shumoe Upholstery"
@@ -217,8 +217,8 @@ angular.module('balushome', ['route'])
             {
                 type:"sofa",
                 category:"Office Sofa",
-                sofaImage:"images/sofa/office-sofa.jpg",
-                seater:"11-12",
+                sofaImage:"images/sofa/exicutive-sofa-5-seater-l-shape.jpg",
+                seater:"5 Seater",
                 size:"5 Meter",
                 color:"White",
                 material:"Leather",
@@ -394,12 +394,22 @@ angular.module('balushome', ['route'])
                 material:"Fabric",
                 manufactureredBy:"Al Shumoe Upholstery"
             },
-{
+            {
                 type:"Sofa",
                 category:"Sectional Sofa",
                 sofaImage:"images/sofa/white-sofa-differenet-color-cushions.jpg",
                 seater:"12-13 Seater",
                 size:"8 Meter",
+                color:"White",
+                material:"Fabric",
+                manufactureredBy:"Al Shumoe Upholstery"
+            },
+            {
+                type:"Sofa",
+                category:"Single Seater for Coffe Shops",
+                sofaImage:"images/sofa/single-seater-for-hotels-coffee-shops.jpg",
+                seater:"1 Seater",
+                size:"NA",
                 color:"White",
                 material:"Fabric",
                 manufactureredBy:"Al Shumoe Upholstery"
