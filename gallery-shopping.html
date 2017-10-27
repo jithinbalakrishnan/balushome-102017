@@ -1,10 +1,115 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" ng-app="balushome">
 <head>
+
     <meta charset="UTF-8">
-    <title></title>
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <!-- HTML5 Shim and Respond.js IE8 support of HTML5 elements and media queries -->
+    <!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+    <!--[if lt IE 9]>
+    <script src="https://oss.maxcdn.com/libs/html5shiv/3.7.0/html5shiv.js"></script>
+    <script src="https://oss.maxcdn.com/libs/respond.js/1.4.2/respond.min.js"></script>
+    <![endif]-->
+
+    <link rel="stylesheet" href="node_modules/bootstrap/dist/css/bootstrap.min.css"/>
+    <!-- Custom CSS -->
+    <link rel="stylesheet" href="include/style.css"/>
+    <script src="node_modules/angular/angular.min.js"></script>
+    <script src="node_modules/angular-route/angular-route.min.js"></script>
+    <script src="node_modules/jquery/dist/jquery.min.js"></script>
+    <script src="node_modules/bootstrap/dist/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="node_modules/font-awesome/css/font-awesome.min.css"/>
+    <script src="js/routes.js"></script>
+    <script src="js/app.js"></script>
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans:300italic,400italic,600italic,700italic,800italic,400,300,600,700,800" rel="stylesheet" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Josefin+Slab:100,300,400,600,700,100italic,300italic,400italic,600italic,700italic" rel="stylesheet" type="text/css">
+    <!--Google js files -->
+    <script src="js/google-analytics.js"></script>
+    <script src="js/google-tagmanager-head.js"></script>
+    <!-- Browser icons -->
+    <link rel="apple-touch-icon" sizes="180x180" href="images/icons/apple-touch-icon.png">
+    <link rel="icon" type="image/png" href="images/icons/favicon-32x32.png" sizes="32x32">
+    <link rel="icon" type="image/png" href="images/icons/favicon-16x16.png" sizes="16x16">
+
+
 </head>
 <body>
+<!-- Navigation -->
+<nav class="navbar navbar-gallery navbar-fixed-top navbar-default" role="navigation">
+    <div class="container">
+        <!-- Brand and toggle get grouped for better mobile display -->
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#bs-example-navbar-collapse-1">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <!-- navbar-brand is hidden on larger screens, but visible when the menu is collapsed -->
+            <a class="navbar-brand" href="index.html"><img class="nav-logo" src="images/index-images/balushome_png.png"></a>
+
+        </div>
+        <!-- Collect the nav links, forms, and other content for toggling -->
+        <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
+            <ul class="nav navbar-nav">
+                <li>
+                    <a href="#/" id="home_nav" class="" target="_self" ng-class="{'nav-active' : active == 0}" ng-click="active = 0">Home</a>
+                </li>
+                <li>
+                    <a id="about_nav" class="show-cursor" target="_self" ng-class="{'nav-active' : active == 1}" ng-click="active = 1;routeTo('about')">About</a>
+                </li>
+                <li class="active">
+                    <a id="gallery_nav" class="show-cursor" target="_self" ng-class="{'nav-active' : active == 2}" ng-click="active = 2;">Gallery</a>
+                </li>
+                <li>
+                    <a id="contact_nav" class="show-cursor" target="_self" ng-class="{'nav-active' : active == 3}" ng-click="active = 3;routeTo('contact')">Contact</a>
+                </li>
+                <li>
+                    <a id="blogs_nav" class="show-cursor" target="_self" ng-class="{'nav-active' : active == 4}" ng-click="active=4;routeTo('blogs')">Blogs</a>
+                </li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+    <!-- /.container -->
+</nav>
+
+<div class="container gallery-container">
+    <div class="row"  ng-controller="mainCtrl">
+        <div class="box">
+            <div class="col-lg-4 col-sm-6 gallery-wrapper"  ng-repeat="furniture in furnitures">
+                <img class="gal-image-wrapper"  ng-src="{{furniture.sofaImage}}" alt="">
+                <div class="product-description-wrapper">
+                    <div class="category">{{furniture.category}}</div>
+                    <div class="product-details"><span class="">{{furniture.seater}}</span>|<span class="gap">{{furniture.size}}</span>|<span class="gap">{{furniture.color}}</span>|<span class="gap">{{furniture.material}}</span></div>
+                    <div class="manufactured-by">{{furniture.manufactureredBy}}</div>
+                </div>
+            </div>
+            <div class="col-lg-12 text-center">
+                <div class="description-format">
+                    * Description Format:<span class="gap">Seater</span>|<span class="gap">Size</span>|<span class="gap">Color</span>|<span class="gap">Material</span>|<span class="gap">Manufactured By</span>
+                    <div>* Seater, Size, Color and Materials are customizable.Based on Customers demand Al Shumoe Upholstery will manufactuer sofa </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="container">
+    <div class="row">
+        <div class="box">
+            <div class="col-lg-12">
+                <h2 class="intro-text text-center">
+                    <strong>To Know About Pricing Details And More Message Us On WhatsApp</strong><br><br>
+                    &nbsp; &nbsp;<img src="images/social/WhatsApp-icon.png" style="height:40px ;width:40px ;" >&nbsp; <strong style="font-size: 30px">+973-35575189 </strong>
+                    <br><br> <a class="btn btn-danger center-block" href="tel:+973-35575189" role="button">Add to Contact</a>
+                </h2>
+
+            </div>
+        </div>
+    </div>
+</div>
 
 </body>
 </html>
