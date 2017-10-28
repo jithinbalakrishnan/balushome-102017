@@ -91,6 +91,7 @@ hr {
     padding: 30px 15px;
     background: rgba(255,255,255,0.9)!important;
     border-radius: 60px 5px 60px 5px;
+    cursor: pointer;
 }
 .btn{
     max-width: 275px;
@@ -145,6 +146,11 @@ footer p {
     max-width: 333px;
     min-height: 250px;
 
+}
+.alert-image-wrapper {
+    width: 100%;
+    position: relative;
+    margin: 0 auto;
 }
 .category{
     padding-top: 10px;
