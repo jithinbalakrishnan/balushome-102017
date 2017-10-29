@@ -1,11 +1,10 @@
-angular.module('balushome', ['route'])
+angular.module('balushome', ['ngRoute'])
     .controller('serviceCtrl', function () {
         window.scrollTo(0, 0);
     })
     .controller('mainCtrl', function ($scope, $location) {
         window.scrollTo(0, 0);
         $scope.active = 0;
-        $scope.previewImageUrl = "";
         $scope.furnitures = [
             {
                 type: "sofa",
@@ -433,18 +432,22 @@ angular.module('balushome', ['route'])
 
         $scope.routeTo = function (route) {
             $location.path(route);
+            window.scrollTo(0, 0);
         };
 
         $scope.updatePreviewImage = function (index) {
-            $scope.previewImageUrl=$scope.furnitures[index].sofaImage;
-            $scope.previewImageTitle=$scope.furnitures[index].category;
-            $scope.previewSofaSeater=$scope.furnitures[index].seater;
-            $scope.previewSofaSize=$scope.furnitures[index].size;
-            $scope.previewSofaColor=$scope.furnitures[index].color;
-            $scope.previewSofaMaterial=$scope.furnitures[index].material;
-            $scope.previewSofaSeller=$scope.furnitures[index].manufactureredBy;
-        };
-    });
+            $scope.modalContent = {
+                ImageUrl: $scope.furnitures[index].sofaImage,
+                ImageTitle: $scope.furnitures[index].category,
+                SofaSeater: $scope.furnitures[index].seater,
+                SofaSize: $scope.furnitures[index].size,
+                SofaColor: $scope.furnitures[index].color,
+                SofaMaterial: $scope.furnitures[index].material,
+                SofaSeller: $scope.furnitures[index].manufactureredBy
+
+            };
+        }
+        }) ;
 
 
 

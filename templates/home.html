@@ -108,7 +108,7 @@
             <div class="col-lg-12">
                 <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" ng-repeat="furniture in furnitures|limitTo:9">
                     <br>
-                    <div class="image-wrapper img-responsive" style="background: url('{{furniture.sofaImage}}') no-repeat;background-size: cover;"></div>
+                    <div class="gallery_img image-wrapper img-responsive show-cursor" ng-click="routeTo('gallery')" style="background: url('{{furniture.sofaImage}}') no-repeat;background-size: cover;"></div>
                     <!--<img  ng-repeat="furniture in furnitures|limitTo:9" height="35" width="35" ng-src="{{furniture.sofaImage}}" alt="">-->
                 </div>
             </div>

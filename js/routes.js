@@ -1,16 +1,20 @@
-var route = angular.module('route', ['ngRoute']);
-
-route.config(function ($routeProvider) {
+angular.module('balushome')
+    .config(function ($routeProvider, $locationProvider) {
     $routeProvider
         .when("/", {
             templateUrl: "templates/home.html"
+
         })
         .when("/about", {
             templateUrl: "templates/about.html"
         })
+        .when("/gallery", {
+            templateUrl: "templates/gallery-shopping.html"
+        })
         .when("/contact", {
             templateUrl: "templates/contact.html"
-        }).when("/blogs", {
+        })
+        .when("/blogs", {
             templateUrl: "templates/blogs.html"
         })
         .when("/services-upholstery", {
@@ -21,6 +25,6 @@ route.config(function ($routeProvider) {
         })
         .otherwise({redirectTo :'/'});
 
-
+    $locationProvider.html5Mode(true);
 
 });

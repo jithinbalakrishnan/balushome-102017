@@ -63,7 +63,7 @@
             <div class="col-lg-12"><br></div>
             <div class="col-lg-12">
                 <div class="col-lg-4">
-                    <img class="img-responsive  img-full" src="images/sofa/sectional-sofa/sectional-sofa-8-seater-blue.jpg" alt="upholstery fabric sofas" style="height:240px; width: 20px " >
+                    <img class="img-responsive  img-full" src="images/sofa/1-seater-sofas.jpg" alt="upholstery fabric sofas" style="height:240px; width: 20px " >
                 </div>
                 <div class="col-lg-4">
                     <img class="img-responsive  img-full" src="images/upholstery/upholstery-arabian-sofa.jpg" alt="upholstery fabric sofa" style="height:240px; width: 20px ">
@@ -117,6 +117,43 @@
         </div>
     </div>
 
+    <!-- Gallery -->
+    <div class="row box">
+        <div class="">
+            <div class="col-lg-12">
+                <hr>
+                <h2 class="intro-text text-center"><strong>Gallery</strong></h2>
+                <hr>
+            </div>
+            <div class="col-lg-12">
+                <div class="col-lg-4 col-md-4 col-sm-6 col-xs-12" ng-repeat="furniture in furnitures|limitTo:9">
+                    <br>
+                    <div class="gallery_img image-wrapper img-responsive show-cursor" ng-click="routeTo('gallery')" style="background: url('{{furniture.sofaImage}}') no-repeat;background-size: cover;"></div>
+                    <!--<img  ng-repeat="furniture in furnitures|limitTo:9" height="35" width="35" ng-src="{{furniture.sofaImage}}" alt="">-->
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Gallery End-->
+
+    <div class="row">
+        <div class="box review-box">
+            <div class="col-lg-12">
+                <hr>
+                <h2 class="intro-text text-center"><strong>Reviews & Ratings</strong></h2>
+                <hr>
+            </div>
+            <div class="col-lg-12 ">
+                <div class="col-lg-6">
+                    <div class="fb-post" data-href="https://www.facebook.com/kim.chadwick/posts/10154150823606317:0" data-width="500" data-show-text="false"><blockquote cite="https://www.facebook.com/kim.chadwick/posts/10154150823606317:0" class="fb-xfbml-parse-ignore"><p>Excellent quality sofa and made exactly how we requested. Would definitely recommend!</p>Posted by <a href="#" role="button">Kim Chadwick</a> on&nbsp;<a href="https://www.facebook.com/kim.chadwick/posts/10154150823606317:0">Monday, 14 November 2016</a></blockquote></div>
+                </div>
+                <div class="col-lg-6">
+                    <div class="fb-post" data-href="https://www.facebook.com/josie.houpt/posts/10159257195735510:0" data-width="500" data-show-text="true"><blockquote cite="https://www.facebook.com/josie.houpt/posts/10159257195735510:0" class="fb-xfbml-parse-ignore"><p>Really great work and attention to detail. They reupholstered my sofa and puppy proofed it by adding an additional wire mesh on the underside. Very happy with their service!</p>Posted by <a href="#" role="button">Josie Houpt</a> on&nbsp;<a href="https://www.facebook.com/josie.houpt/posts/10159257195735510:0">Monday, 11 September 2017</a></blockquote></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!--End Review and Ratings-->
     <!-- /.social -->
     <div class="row">
         <div class="box">

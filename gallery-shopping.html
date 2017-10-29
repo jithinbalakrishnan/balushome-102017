@@ -55,7 +55,7 @@
         <div class="collapse navbar-collapse" id="bs-example-navbar-collapse-1">
             <ul class="nav navbar-nav">
                 <li>
-                    <a href="#/" id="home_nav" class="" target="_self" ng-class="{'nav-active' : active == 0}" ng-click="active = 0">Home</a>
+                    <a href="#/" id="home_nav" class="" target="_self" ng-class="{'nav-active' : active == 0}" ng-click="active = 0;routeTo('home')">Home</a>
                 </li>
                 <li>
                     <a id="about_nav" class="show-cursor" target="_self" ng-class="{'nav-active' : active == 1}" ng-click="active = 1;routeTo('about')">About</a>
@@ -81,7 +81,7 @@
         <div class="">
             <div class="col-lg-4 col-sm-6 gallery-wrapper"  ng-repeat="furniture in furnitures">
                 <div class="gallery-box" ng-click="updatePreviewImage($index)" data-toggle="modal" data-target="#myModal">
-                    <img class="gal-image-wrapper"  ng-src="{{furniture.sofaImage}}" alt="">
+                    <img class="gallery_img gal-image-wrapper"  ng-src="{{furniture.sofaImage}}" alt="">
                     <div class="product-description-wrapper">
                         <div class="category">{{furniture.category}}</div>
                         <div class="product-details"><span class="">{{furniture.seater}}</span>|<span class="gap">{{furniture.size}}</span>|<span class="gap">{{furniture.color}}</span>|<span class="gap">{{furniture.material}}</span></div>
@@ -119,29 +119,25 @@
         <div class="modal-content">
             <div class="modal-header">
                 <button type="button" class="close" data-dismiss="modal">&times;</button>
-                <h4 class="modal-title">{{previewImageTitle}}</h4>
+                <h4 class="modal-title">{{modalContent.ImageTitle}}</h4>
             </div>
             <div class="modal-body">
-                <img class="alert-image-wrapper" ng-src="{{previewImageUrl}}" alt="">
-                <div class="product-details"><span class="">{{previewSofaSeater}}</span>|<span class="gap">{{previewSofaSize}}</span>|<span class="gap">{{previewSofaColor}}</span>|<span class="gap">{{previewSofaMaterial}}</span></div>
-                <div class="manufactured-by">{{previewSofaSeller}}</div>
-                <div class="">
+                <img class="alert-image-wrapper" ng-src="{{modalContent.ImageUrl}}" alt="">
+                <div class="product-details"><span class="">{{modalContent.SofaSeater}}</span>|<span class="gap">{{modalContent.SofaSize}}</span>|<span class="gap">{{modalContent.SofaColor}}</span>|<span class="gap">{{modalContent.SofaMaterial}}</span></div>
+                <div class="manufactured-by">{{modalContent.SofaSeller}}</div>
+                <div>
                     <h2 class="intro-text text-center">
                         <strong>To Know About Pricing Details Message us on WhatsApp</strong><br><br>
                         &nbsp; &nbsp;<img src="images/social/WhatsApp-icon.png" style="height:40px ;width:40px ;" >&nbsp; <strong style="font-size: 30px">+973-35575189 </strong>
                         <br><br> <a class="btn btn-danger center-block" href="tel:+973-35575189" role="button">Add to Contact</a>
                     </h2>
-
                 </div>
-
             </div>
             <div class="modal-footer">
                 <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
             </div>
         </div>
-
     </div>
 </div>
-
 </body>
 </html>
